@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    
+    <!-- metadata para hacer el documento responsivo para dispositivos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- el width=device-width establece el ancho de la página según el ancho de la pantalla del dispositivo,
+    mientras que initial-scale= determina el zoom inicial de la página cuando es cargada por primera vez
+    por el navegador  -->   
+    <!--
+       grid-breakpoints: (
+       xs: 0,
+       sm: 576px,
+       md: 768px,
+       lg: 992px,
+       xl: 1200px,
+       xxl: 1400px
+                      );
+    -->
+    <title>Practicando Bootstrap</title>
+</head>
+<body>
+    <div class="container-md pt-5 pb-5">
+        <h1 class="display2">Practica 1</h1><br>
+        <div class="row bg-light text-white text-center pt-4 pb-4 border">
+        <div class="col-4 bg-dark mb-3 border">1</div>
+        <div class="col-4 bg-success mb-3 mt-3 border">2</div>
+        <div class="col-4 bg-info mt-3 border">3</div>
+    </div><br>
+    <div class="row bg-dark text-white text-center pt-4 pb-4 border">
+        <div class="col-6 bg-secondary">A</div>
+        <div class="col-6 bg-primary">B</div>
+    </div><br>
+
+    <!-- imagen como link -->
+    <a href="https://mobile.twitter.com/mitsuyadaily">
+    <img src="https://api.duniagames.co.id/api/content/upload/file/2879511401632479749.jpg" 
+    class="col-4 img-thumbnail mx-auto d-block img-fluid ms-6 me-6" alt="A"></a><br>
+
+    <!-- botón como link -->
+    <button class="btn bg-info mx-auto d-block" onclick="document.location='https://mobile.twitter.com/mitsuyadaily'">Twitter de @dailymitsuya</button><br>
+     
+    <!-- elemento figura para insertar una imagen y su descripción + imagen como link -->
+     <figure class="figure mx-auto d-block">
+         <a href="https://mobile.twitter.com/mitsuyadaily">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4JgsAw-jwN3THsMQsmdvmQ3tvHR-ul2ivjg&usqp=CAU" class="figure-img mx-auto d-block">
+        </a>     
+         <figcaption class="figure-caption text-center">Mitsuya</figcaption>
+     </figure>
+
+    </div>
+
+<div class="container-md bg-secondary pt-3 pb-2">
+    <table class="table table-bordered table-striped small table-hover">
+        <thead class="table-light">
+            <th class="col-3">Personajes</th>
+            <th class="col-3">Color de pelo</th>
+            <th class="col-3">Color de ojos</th>
+            <th class="col-3">Amor del 1-10</th>
+        </thead>
+        <tbody>
+            <tr class="table-success">
+                <td>Draken</td>
+                <td>Rubio/Negro</td>
+                <td>Marrón</td>
+                <td>10</td>
+            </tr>
+            <tr class="table-primary">
+                <td>Mitsuya</td>
+                <td>Rubio platinado, casi plateado/violeta</td>
+                <td>Violeta</td>
+                <td>10</td>
+            </tr>
+            <tr class="table-warning">
+                <td>Kazutora</td>
+                <td>Negro/Amarillo</td>
+                <td>Amarillos</td>
+                <td>10</td>
+            </tr>      
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

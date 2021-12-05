@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- metadata para hacer el documento responsivo para dispositivos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- el width=device-width establece el ancho de la página según el ancho de la pantalla del dispositivo,
+    mientras que initial-scale= determina el zoom inicial de la página cuando es cargada por primera vez
+    por el navegador  -->  
+    <title>Flexbox con Bootstrap</title>
+</head>
+
+<!-- además del framework que nos provee Bootstrap, le podemos agregar nuestros estilos personalizados con CSS de forma interna, o sea
+con la etiqueta style antes del body; en este caso modificamos el color de los links visitados a blanco -->
+<style>
+    
+
+      a {
+      color:black;
+      background-color: transparent;
+      text-decoration: none;
+    }
+
+    a:hover{
+        color:brown;
+        text-decoration: underline;
+    }
+
+    
+
+    </style>
+<body>
+
+    <!-- el siguiente contenedor contiene tres cajas en donde ubicamos a una red social en cada uno, podiendo acceder a ellas mediante un
+    link haciendo click en el título de caja cada -->
+    <div class="container d-flex bg-light justify-content-center my-5 border border-4 border-dark rounded" style="height:150px">
+
+        <!-- esta es la caja para acceder a Gmail, con su ubicación al final del contenedor (align-self-end) y color propio (danger) -->
+        <div class="p-2 border align-self-end bg-danger mx-5 mb-2 text-white">
+          <a  class="link-light hover" href="https://mail.google.com" title="Acceder a Gmail" target="_blank">Acceder a Gmail</a>      
+        </div>
+
+        <!-- esta es la caja para acceder a Twitter, con su ubicación en el medio de la caja (align-self-center) y es de color azul (info) -->
+        <div class="p-2 border align-self-center bg-info mx-5 text-white">
+            <a class="link-secondary" href="https://twitter.com/" title="Acceder a Twitter" target="_blank">Acceder a Twitter</a>
+        </div>
+
+        <!-- esta es la caja para ir a Spotify Web, con su ubicación mediante align-self-start y además es de color verde -->
+        <div class="p-2 border align-self-start bg-success mx-5 mt-2 text-white">
+            <a class="link-dark" href="https://www.spotify.com/ar/" title="Acceder a Spotify Web" target="_blank">Acceder a Spotify Web</a>
+        </div>
+      </div>
+
+
+
+</body>
+</html>
