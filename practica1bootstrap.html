@@ -24,10 +24,25 @@
     -->
     <title>Practicando Bootstrap</title>
 </head>
+<style>
+
+.clase1{
+    align-self: center;
+    transition: 400ms all ease;
+};
+
+.clase2{
+    width: 200px;
+    transition: 400ms all ease;
+    align-self: center;
+}
+
+
+</style>
 <body>
-    <h1>Holiii</h1>
+    
     <div class="container-md pt-5 pb-5">
-        <h1 class="display2">Practica 1</h1><br>
+        <h1 class="display2">Practica 1 Bootstrap</h1><br>
         <div class="row bg-light text-white text-center pt-4 pb-4 border">
         <div class="col-4 bg-dark mb-3 border">1</div>
         <div class="col-4 bg-success mb-3 mt-3 border">2</div>
@@ -37,24 +52,40 @@
         <div class="col-6 bg-secondary">A</div>
         <div class="col-6 bg-primary">B</div>
     </div><br>
+</div>
 
     <!-- imagen como link -->
-    <a href="https://mobile.twitter.com/mitsuyadaily">
-    <img src="https://api.duniagames.co.id/api/content/upload/file/2879511401632479749.jpg" 
-    class="col-4 img-thumbnail mx-auto d-block img-fluid ms-6 me-6" alt="A"></a><br>
+
+    <div class="container d-flex justify-content-center"
+    <a href="https://mobile.twitter.com/mitsuyadaily" target="_blank" class="col-4 mx-auto">
+    <img src="https://api.duniagames.co.id/api/content/upload/file/2879511401632479749.jpg"
+    class="col-4 img-thumbnail my-4" alt="A"></a><br>
+    </div>
 
     <!-- botón como link -->
     <button class="btn bg-info mx-auto d-block" onclick="document.location='https://mobile.twitter.com/mitsuyadaily'">Twitter de @dailymitsuya</button><br>
      
     <!-- elemento figura para insertar una imagen y su descripción + imagen como link -->
+    <div class="container d-flex justify-content-center"
      <figure class="figure mx-auto d-block">
-         <a href="https://mobile.twitter.com/mitsuyadaily">
+         <a href="https://mobile.twitter.com/mitsuyadaily " target="_blank">
              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4JgsAw-jwN3THsMQsmdvmQ3tvHR-ul2ivjg&usqp=CAU" class="figure-img mx-auto d-block">
-        </a>     
-         <figcaption class="figure-caption text-center">Mitsuya</figcaption>
+        </a>   
      </figure>
-
     </div>
+    <figcaption class="figure-caption text-center">Mitsuya</figcaption>
+
+
+
+
+
+
+
+    <img onclick="funcioN()" id="demoImagen" src="https://pbs.twimg.com/profile_images/1396509437813137408/8iDv5dqT_400x400.jpg" 
+    class="clase1 img-thumbnail mx-auto d-block my-5 py-4 px-4" width="200px">
+  
+
+   
 
 <div class="container-md bg-secondary pt-3 pb-2">
     <table class="table table-bordered table-striped small table-hover">
@@ -62,7 +93,7 @@
             <th class="col-3">Personajes</th>
             <th class="col-3">Color de pelo</th>
             <th class="col-3">Color de ojos</th>
-            <th class="col-3">Amor del 1-10</th>
+            <th class="col-3">Puntos</th>
         </thead>
         <tbody>
             <tr class="table-success">
@@ -86,5 +117,21 @@
         </tbody>
     </table>
 </div>
+
+<script>
+
+//obtengo el elemento por iD
+
+
+function funcioN(){
+    let imagen = document.getElementById("demoImagen");
+    if (imagen.style.width == "200px"){
+        imagen.style.width = "400px"
+    }
+    else {imagen.style.width = "200px"}
+        
+};
+
+</script>    
 </body>
 </html>

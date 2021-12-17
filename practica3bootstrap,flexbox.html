@@ -16,12 +16,12 @@
 </head>
 
 <!-- además del framework que nos provee Bootstrap, le podemos agregar nuestros estilos personalizados con CSS de forma interna, o sea
-con la etiqueta style antes del body; en este caso modificamos el color de los links visitados a blanco -->
+con la etiqueta style antes del body; en este caso modificamos el color de los links por donde pasa el cursor y también le agregamos una decoración
+(subrayado) -->
 <style>
     
-
       a {
-      color:black;
+      color:white;
       background-color: transparent;
       text-decoration: none;
     }
@@ -31,28 +31,61 @@ con la etiqueta style antes del body; en este caso modificamos el color de los l
         text-decoration: underline;
     }
 
-    
+    .dropdown-item{
+        color:yellowgreen;
+    }
+    .dropdown-item:hover{
+        text-decoration: underline;
+        color: tomato;
+    }
 
     </style>
 <body>
+
+    <ul class="nav nav-tabs nav-justified">
+        <li class="nav-item">
+            <a class="nav-link active" href="#">Gmail</a>
+        </li>
+
+    
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Twitter</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Crear usuario</a></li>
+              <li><a class="dropdown-item" href="#">Olvidé mi contraseña</a></li>
+              <li><a class="dropdown-item" href="#">Ir al inicio de Twitter</a></li>
+            </ul>
+          </li>
+
+
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Telegram</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Ir al sitio web oficial</a></li>
+                <li><a class="dropdown-item" href="#">Más información</a></li>
+            </ul>
+        </li>
+    </ul>
+
+
 
     <!-- el siguiente contenedor contiene tres cajas en donde ubicamos a una red social en cada uno, podiendo acceder a ellas mediante un
     link haciendo click en el título de caja cada -->
     <div class="container d-flex bg-light justify-content-center my-5 border border-4 border-dark rounded" style="height:150px">
 
         <!-- esta es la caja para acceder a Gmail, con su ubicación al final del contenedor (align-self-end) y color propio (danger) -->
-        <div class="p-2 border align-self-end bg-danger mx-5 mb-2 text-white">
-          <a  class="link-light hover" href="https://mail.google.com" title="Acceder a Gmail" target="_blank">Acceder a Gmail</a>      
+        <div class="p-2 border align-self-end bg-danger mx-5 mb-2">
+          <a   href="https://mail.google.com" title="Acceder a Gmail" target="_blank">Acceder a Gmail</a>      
         </div>
 
         <!-- esta es la caja para acceder a Twitter, con su ubicación en el medio de la caja (align-self-center) y es de color azul (info) -->
-        <div class="p-2 border align-self-center bg-info mx-5 text-white">
-            <a class="link-secondary" href="https://twitter.com/" title="Acceder a Twitter" target="_blank">Acceder a Twitter</a>
+        <div class="p-2 border align-self-center bg-info mx-5">
+            <a  href="https://twitter.com/" title="Acceder a Twitter" target="_blank">Acceder a Twitter</a>
         </div>
 
         <!-- esta es la caja para ir a Spotify Web, con su ubicación mediante align-self-start y además es de color verde -->
-        <div class="p-2 border align-self-start bg-success mx-5 mt-2 text-white">
-            <a class="link-dark" href="https://www.spotify.com/ar/" title="Acceder a Spotify Web" target="_blank">Acceder a Spotify Web</a>
+        <div class="p-2 border align-self-start bg-success mx-5 mt-2">
+            <a href="https://www.spotify.com/ar/" title="Acceder a Spotify Web" target="_blank">Acceder a Spotify Web</a>
         </div>
       </div>
 
